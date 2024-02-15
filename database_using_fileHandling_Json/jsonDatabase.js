@@ -385,7 +385,7 @@ class Database {
      * @param {String} tableName name of the table
      */
     async deleteTable(tableName) {
-        const pathOfTable = `${this.databasePath}/${tableName}.txt`
+        const pathOfTable = `${this.databasePath}/${tableName}.json`
         try {
             await fs.unlink(pathOfTable)
             console.log('table deleted successfully');
